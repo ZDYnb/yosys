@@ -1,0 +1,76 @@
+{
+  "binary_sha256": "3aa7038ed43f24a8d8e717598b8e47d986ad2b17594220bc9c0d302baafd2ecc",
+  "host": "Darwin arm64",
+  "hw_flags": [
+    "--mode",
+    "full",
+    "--four-cnf",
+    "--bcp-variant",
+    "all-pipeline",
+    "--fixed-clause-order",
+    "--check-cdcl",
+    "--cycle-model-v3",
+    "--input-tree-stages",
+    "2",
+    "--clock-ns",
+    "2.2",
+    "--arrays",
+    "4096",
+    "--rows",
+    "128",
+    "--variables",
+    "65536",
+    "--ait-rows",
+    "65536",
+    "--stack-rows",
+    "65536",
+    "--source-tokens",
+    "16384",
+    "--conflict-budget",
+    "0"
+  ],
+  "cases": {
+    "good": {
+      "cnf_sha256": "bc8c52fca235c1000fb56b91c4e7cde0ef54660d1dbdb5048c0ce704b9400f65",
+      "variables": 4966,
+      "clauses": 13949,
+      "minisat": "UNSAT",
+      "hw_sat": "UNSAT",
+      "sat_witnesses_checked": false,
+      "minisat_solve_s": [
+        0.064388417,
+        0.064184542,
+        0.06527875,
+        0.063766167,
+        0.063590167,
+        0.066499083,
+        0.064430541
+      ],
+      "minisat_median_s": 0.064388417,
+      "modeled_cycles": 89202841,
+      "estimated_hw_s": 0.1962462502,
+      "emulator_host_solve_s": 15.458401125
+    },
+    "bug": {
+      "cnf_sha256": "59b1aac1836b47af0881b1799c2fe6bd0f40af1492424a30b490abe229cfb1d0",
+      "variables": 4917,
+      "clauses": 13802,
+      "minisat": "SAT",
+      "hw_sat": "SAT",
+      "sat_witnesses_checked": true,
+      "minisat_solve_s": [
+        0.006507417,
+        0.006469833,
+        0.006568375,
+        0.006736625,
+        0.006584209,
+        0.006505792,
+        0.006474459
+      ],
+      "minisat_median_s": 0.006507417,
+      "modeled_cycles": 5185252,
+      "estimated_hw_s": 0.0114075544,
+      "emulator_host_solve_s": 1.095783708
+    }
+  }
+}
